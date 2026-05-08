@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.text("hello")
+st.text("안녕~~ 남동고등학교 여러분,, ")
