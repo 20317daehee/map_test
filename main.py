@@ -31,12 +31,12 @@ m = folium.Map(
     zoom_start=12
 )
 for i in range(len(df)):
-folium.Marker(
-  location = [df.iloc[i]['위도'], 학교.iloc[i]['경도']],
-  popup=f'<div style="width:200px"> <strong>{df.iloc[i]['위치명']}</strong> </div>',
-  tooltip="클릭해보세요",
-  icon = folium.Icon(color='green', icon='info-sign')
-).add_to(m)
+    folium.Marker(
+      location = [df.iloc[i]['위도'], 학교.iloc[i]['경도']],
+      popup=f'<div style="width:200px"> <strong>{df.iloc[i]['위치명']}</strong> </div>',
+      tooltip="클릭해보세요",
+      icon = folium.Icon(color='green', icon='info-sign')
+    ).add_to(m)
 
 
 # 4. 화면 출력
