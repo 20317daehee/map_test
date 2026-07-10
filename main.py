@@ -19,7 +19,7 @@ st.code("a=3")
 
 st.text("안녕~~ 남동고등학교 여러분, 첫 페이지를 만드셧습니다.")
 #데이터 읽어오기(데이터 수집 csv)
-df = pd.read_csv('등산경로.csv',encoding='cp949')
+df = pd.read_csv('등산경로.csv',encoding='utf-8')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
 #st.map(df_latlon)
@@ -40,7 +40,15 @@ for i in range(len(df)):
 
 
 # 4. 화면 출력
+col1, col2 = st.columns([3,1])
+
+with col1:
 st_folium(m, width=700, height=500)
+with col2:
+    st.subheader("정보") #코스정보
+    st.info("길이 미끄럽습니다. 주의하세요.")
+    st.metric(lable="소요시간", value="10분") # 소요시간, 정보 코스별로 넣기
+    st.rite ("주의사항 : 등산화를 착용하세요.")
 
 
 
