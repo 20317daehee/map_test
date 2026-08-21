@@ -11,7 +11,7 @@ st.markdown("우리 동아리가 직접 발로 뛰며 만든 코스 가이드 �
 st.markdown("왼쪽 메뉴에서 코스를 선택하고 행사에 참여해보세요.")
 
 #데이터 읽어오기(데이터 수집 csv)
-df = pd.read_csv('등산경로 - 시트1.csv',encoding='utf-8')
+df = pd.read_csv('등산경로 - 시트1 (1).csv',encoding='utf-8')
 #코스의 위치에 해당하는 사진 이미지 이름 : "images/A입구.jpg"
 df['이미지'] = 'images/'+df['코스'] + ['위치명'] + '.jpg'
 
