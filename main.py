@@ -171,7 +171,7 @@ with col2:
         
         st.markdown("### 📋 전체 코스 개요")
         # 소요시간 텍스트로 보기
-         for k, v in course_info.items():
+        for k, v in course_info.items():
              st.markdown(f"- **{k}**: {v['desc']} *(소요시간: {v['time']})*")
 
          # 소요시간 표로 보기
